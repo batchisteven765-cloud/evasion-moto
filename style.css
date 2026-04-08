@@ -1,0 +1,228 @@
+/* =========================================
+   1. BASICS & TYPOGRAPHY (Point 4)
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. NAVIGATION (Point 6)
+   ========================================= */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #e67e22; 
+}
+
+/* =========================================
+   3. HERO SECTION (Point 4 - Background)
+   ========================================= */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1471466054146-e71bcc0d2bb2?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* =========================================
+   4. LAYOUT & CONTAINERS (Point 1, 10 & 12)
+   ========================================= */
+.main-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-area {
+    flex: 3; 
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    flex: 1; 
+    background: #e67e22;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.media-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   5. TABLES (Point 3)
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    background: white;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+    color: #555;
+}
+
+table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* =========================================
+   6. MULTIMEDIA GALLERY (Point 2)
+   ========================================= */
+.galerie-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.galerie-grid img, .galerie-grid video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.galerie-grid img:hover, .galerie-grid video:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   7. ADDED FEATURES (Point 9)
+   ========================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e67e22;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.contact-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto 0;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* =========================================
+   8. FOOTER & RESPONSIVE (Point 11)
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
